@@ -15,6 +15,10 @@ export default createGlobalStyle`
         height: 100%;
         font-family: 'Teko', sans-serif;
     }
+
+    body {
+        overflow-x: hidden;
+    }
     
     ul {
         list-style: none;

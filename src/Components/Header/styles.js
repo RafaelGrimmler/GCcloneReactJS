@@ -178,9 +178,8 @@ export const ProfileInformationsContainer = styled.div`
 export const ProfileInformationsName = styled.div`
     width: 100%;
     height: 21px;
-    color: white;
-    font-size: 15px;
-    font-stretch: ultra-condensed;
+    color: #EFEFEF;
+    font-size: 16px;
     display: flex;
     font-weight: bold;
     align-items: flex-end;

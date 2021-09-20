@@ -8,17 +8,21 @@ import Header from './Components/Header'
 import Lobby from './Pages/Lobby'
 import Profile from './Pages/Profile'
 
+//Context
+import { UserProvider } from './context/UserContext'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <GlobalStyle />
+    <UserProvider>
+      <BrowserRouter>
+        <Header />
+        <GlobalStyle />
 
-      <Route component = { Lobby }  path="/" exact />
-      <Route component = { Profile }  path="/:id" exact />
+        <Route component = { Lobby }  path="/" exact />
+        <Route component = { Profile }  path="/:id" exact />
 
-    </BrowserRouter>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 

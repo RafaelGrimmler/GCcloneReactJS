@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName } from './styles';
 
 import Miniboxes from '../Miniboxes'
-import Avatar from '../Avatar';
+import Avatar from '../Avatar'
 
 // SVGS
 import Trophy from '../../img/Miniboxes/Trophy.svg'
@@ -15,8 +15,13 @@ import Store from '../../img/Miniboxes/Store.svg'
 import Notification from '../../img/Miniboxes/Notification.svg'
 //
 
+import { useUser } from '../../context/UserContext'
+
 function Header() {
-  return (
+
+    const User = useUser()
+
+    return (
       <Container>
           <LeftSide>
 
@@ -77,12 +82,12 @@ function Header() {
 
             <ProfileBar>
                 <ProfileAvatar>
-                    <Avatar id='Rafael'/>
+                    <Avatar id={User.id}/>
                 </ProfileAvatar>
                 <ProfileInformations>
                     <ProfileInformationsContainer>
                         <ProfileInformationsName>
-                            <span>Rafael</span>
+                            <span>{User.name}</span>
                         </ProfileInformationsName>
                     </ProfileInformationsContainer>
                 </ProfileInformations>

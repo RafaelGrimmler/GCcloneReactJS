@@ -1,37 +1,56 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import { Container } from './styles';
+import Profiles from '../../Profiles.json'
 
 function Profile() {
 
     let { id } = useParams();
 
-    console.log(id);
+    const User = (id < Profiles.length && id >= 0 ) ? Profiles[id] : false
 
     return (
         <Container>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
-            <h1>{id}</h1>
+            {User ? (
+            <div>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+                <h1>{User.name}</h1>
+            </div>
+            ) : (
+                <div>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                    <h1>Falso</h1>
+                </div>
+            )}
         </Container>
     );
 }

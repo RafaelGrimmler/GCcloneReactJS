@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName } from './styles';
+import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName, ProfileLevelContainer, ProfileLevel, ProfileBadge } from './styles';
 
 import Miniboxes from '../Miniboxes'
 import Avatar from '../Avatar'
+import Level from '../Level'
 
 // SVGS
 import Trophy from '../../img/Miniboxes/Trophy.svg'
@@ -15,6 +16,8 @@ import Store from '../../img/Miniboxes/Store.svg'
 import Notification from '../../img/Miniboxes/Notification.svg'
 //
 
+
+// Context
 import { useUser } from '../../context/UserContext'
 
 function Header() {
@@ -89,6 +92,12 @@ function Header() {
                         <ProfileInformationsName>
                             <span>{User.name}</span>
                         </ProfileInformationsName>
+                        <ProfileLevelContainer>
+                            <ProfileLevel>
+                                <Level value={20} />
+                            </ProfileLevel>
+                            <ProfileBadge />
+                        </ProfileLevelContainer>
                     </ProfileInformationsContainer>
                 </ProfileInformations>
             </ProfileBar>

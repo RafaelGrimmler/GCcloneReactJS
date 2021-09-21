@@ -186,6 +186,29 @@ export const ProfileInformationsName = styled.div`
     overflow-x: hidden;
 `;
 
+export const ProfileLevelContainer = styled.div`
+    width: 100%;
+    height: 32px;
+    display: flex;
+`;
+
+export const ProfileLevel = styled.div`
+    height: 100%;
+    width: 50%;
+`;
+
+export const ProfileBadge = styled.div`
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://gamersclub.com.br/assets/images/patentes/patenteless.png');
+    background-size: 23px;
+    background-repeat: no-repeat;
+    background-position: center center;
+`;
+
 export const LeftSide = styled.div`
     display: flex;
     height: 100%;

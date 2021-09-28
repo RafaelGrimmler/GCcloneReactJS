@@ -2,9 +2,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 89px;
-    height: 79px;
+    height: 78px;
     border-right: 1px solid var(--header-border-color);
+    border-bottom: 1px solid var(--main-bg-color);
     position: relative;
+    
+    transition: border-bottom-color 0.5s;
+
+    &:hover {
+        border-bottom-color: #d6d6d6;
+    }
 
     & div:nth-child(1) {
         height: 50%;

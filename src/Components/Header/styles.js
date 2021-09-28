@@ -24,12 +24,18 @@ export const RightSide = styled.div`
 
 export const Signature = styled.div`
     width: 89px;
-    height: 79px;
+    height: 78px;
     background: linear-gradient(135deg, rgba(195,71,101,.19),rgba(26,103,194,.32));
     border-right: 1px solid var(--header-border-color);
     border-left: 1px solid var(--header-border-color);
+    border-bottom: 1px solid rgba(26,103,194,.32);
+    transition: border-bottom-color 0.5s;
     cursor: pointer;
     position: relative;
+    
+    &:hover {
+        border-bottom-color: #d6d6d6;
+    }
 
     & div:nth-child(1) {
         height: 50%;
@@ -74,8 +80,14 @@ export const Points = styled.div`
     display: flex;
     background-color: var(--main-bg-color);
     border-right: 1px solid var(--header-border-color);
+    border-bottom: 1px solid var(--main-bg-color);
     cursor: pointer;
     position: relative;
+    transition: border-bottom-color 0.5s;
+
+    &:hover {
+        border-bottom-color: #d6d6d6;
+    }
 
     & span {
         color: white;
@@ -151,8 +163,14 @@ export const ProfileBar = styled.div`
     height: 78px;
     background-color: var(--main-bg-color);
     border-right: 1px solid var(--header-border-color);
+    border-bottom: 1px solid var(--main-bg-color);
     display: flex;
     justify-content: center;
+    transition: border-bottom-color 0.5s;
+
+    &:hover {
+        border-bottom-color: #d6d6d6;
+    }
 `;
 
 export const ProfileAvatar = styled.div`
@@ -209,6 +227,71 @@ export const ProfileBadge = styled.div`
     background-position: center center;
 `;
 
+export const Menu = styled.div`
+    width: 80px;
+    height: 78px;
+    border-right: 1px solid var(--header-border-color);
+    border-bottom: 1px solid ${props=>props.bg ? 'rgba(44,151,222,.6)' : 'var(--main-bg-color)'};
+    cursor: pointer;
+    background: ${props=>props.bg ? 'linear-gradient(-180deg,rgba(44,151,222,0) 20%,rgba(44,151,222,.2));' : ''}
+    
+`;
+
+export const MenuSup = styled.div`
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+`;
+
+export const MenuInf = styled.div`
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    & span {
+        font-stretch: ultra-condensed;
+        font-weight: bold;
+        font-size: 11px;
+        color: var(--header-font-color);
+        position: absolute;
+        top: 7px;
+    }
+`;
+
+export const MenuBar = styled.div`
+    width: 25px;
+    height: 2px;
+    background-color: ${props=>props.bg};
+    position: absolute;
+    top: 58%;
+    transition: 0.3s;
+
+    &:after {
+        content: '';
+        width: 25px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: ${props=>props.top}px;
+        transform: rotate(${props=>props.rota});
+        transition: 0.3s;
+    }
+
+    &:before {
+        content: '';
+        width: 25px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: -${props=>props.top}px;
+        transform: rotate(${props=>props.rotb});
+        transition: 0.3s;
+    }
+`;
+
 export const LeftSide = styled.div`
     display: flex;
     height: 100%;
@@ -218,6 +301,11 @@ export const Logo = styled.div`
     width: 240px;
     height: 78px;
     background-color: white;
+    border-bottom: 1px solid #2a3469;
+
+    &:hover {
+        border-bottom: 1px solid rgba(44,151,222,.6);
+    }
 
     a div {
         width: 100%;

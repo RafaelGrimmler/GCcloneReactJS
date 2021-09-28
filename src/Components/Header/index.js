@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName, ProfileLevelContainer, ProfileLevel, ProfileBadge } from './styles';
+import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName, ProfileLevelContainer, ProfileLevel, ProfileBadge, Menu, MenuBar, MenuSup, MenuInf } from './styles';
 
 import Miniboxes from '../Miniboxes'
 import Avatar from '../Avatar'
@@ -23,6 +23,12 @@ import { useUser } from '../../context/UserContext'
 function Header() {
 
     const User = useUser()
+    const [menuActivated, setMenuActivated] = useState(false)
+
+    const HandleMenu = ()=>{
+        menuActivated ? setMenuActivated(false) : setMenuActivated(true)
+        console.log(menuActivated)
+    }
 
     return (
       <Container>
@@ -41,7 +47,6 @@ function Header() {
                 <span>AGORA</span>
             </PlayNow>
 
-
             <Miniboxes description='CAMPEONATOS' svg={Trophy} svgzoom='18px' svgpositionY='16px'/>
             <Miniboxes description='RANKED' svg={Star} svgzoom='23px' svgpositionY='11px'/>
             <Miniboxes description='MISSÕES' svg={Medal} svgzoom='20px' svgpositionY='12px'/>
@@ -50,8 +55,6 @@ function Header() {
             <Miniboxes description='BUSCAR' svg={Search}svgzoom='16px' svgpositionY='14px'/>
 
           </LeftSide>
-
-
 
           <RightSide>
             <Signature>
@@ -81,7 +84,7 @@ function Header() {
                 </SilverPoint>
             </Points>
             
-            <Miniboxes description='NOTIFICAÇÕES' svg={Notification}svgzoom='18px' svgpositionY='14px'/>
+            <Miniboxes description='NOTIFICAÇÕES' svg={Notification}svgzoom='16px' svgpositionY='16px'/>
 
             <ProfileBar>
                 <ProfileAvatar>
@@ -101,6 +104,19 @@ function Header() {
                     </ProfileInformationsContainer>
                 </ProfileInformations>
             </ProfileBar>
+
+            <Menu onClick={HandleMenu} bg={menuActivated}>
+                <MenuSup>
+                    <MenuBar  
+                        bg={menuActivated ? 'transparent':'white'}
+                        top={menuActivated ? '0':'5'}
+                        rota={menuActivated ? '135deg':'0deg'}
+                        rotb={menuActivated ? '225deg':'0deg'}/>
+                </MenuSup>
+                <MenuInf>
+                    <span>MENU</span>
+                </MenuInf>
+            </Menu>
 
           </RightSide>
       </Container>

@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Container } from './styles';
 
-function MiniboxesHeader({ description, svg, svgzoom, svgpositionY }) {
+function MiniboxesHeader({ description, svg, svgzoom, svgpositionY, bbt }) {
   return (
       <a href="https://gamersclub.com.br/">
-        <Container svg={svg} svgzoom={svgzoom} svgpositionY={svgpositionY}>
+        <Container svg={svg} svgzoom={svgzoom} svgpositionY={svgpositionY} bbt={bbt}>
             <div />
             <div>
                 <span>{description}</span>

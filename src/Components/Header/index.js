@@ -47,12 +47,12 @@ function Header() {
                 <span>AGORA</span>
             </PlayNow>
 
-            <Miniboxes description='CAMPEONATOS' svg={Trophy} svgzoom='18px' svgpositionY='16px'/>
-            <Miniboxes description='RANKED' svg={Star} svgzoom='23px' svgpositionY='11px'/>
-            <Miniboxes description='MISSÕES' svg={Medal} svgzoom='20px' svgpositionY='12px'/>
-            <Miniboxes description='GAMES ACADEMY' svg='https://gamersclub.com.br/assets/images/icone-ga.png'svgzoom='15px' svgpositionY='12px'/>
-            <Miniboxes description='NOTÍCIAS' svg={Draft} svgzoom='24px' svgpositionY='15px'/>
-            <Miniboxes description='BUSCAR' svg={Search}svgzoom='16px' svgpositionY='14px'/>
+            <Miniboxes description='CAMPEONATOS' svg={Trophy} svgzoom='18px' svgpositionY='16px' bbt={true}/>
+            <Miniboxes description='RANKED' svg={Star} svgzoom='23px' svgpositionY='11px' bbt={true}/>
+            <Miniboxes description='MISSÕES' svg={Medal} svgzoom='20px' svgpositionY='12px' bbt={true}/>
+            <Miniboxes description='GAMES ACADEMY' svg='https://gamersclub.com.br/assets/images/icone-ga.png'svgzoom='15px' svgpositionY='12px' bbt={true}/>
+            <Miniboxes description='NOTÍCIAS' svg={Draft} svgzoom='24px' svgpositionY='15px' bbt={true}/>
+            <Miniboxes description='BUSCAR' svg={Search}svgzoom='16px' svgpositionY='14px' bbt={true}/>
 
           </LeftSide>
 
@@ -66,7 +66,7 @@ function Header() {
                     <div />
                 </a>
             </Signature>
-            <Miniboxes description='LOJA' svg={Store}svgzoom='18px' svgpositionY='14px'/>
+            <Miniboxes description='LOJA' svg={Store}svgzoom='18px' svgpositionY='14px' bbt={true}/>
 
             <Points>
                 <PointsHover />
@@ -84,7 +84,7 @@ function Header() {
                 </SilverPoint>
             </Points>
             
-            <Miniboxes description='NOTIFICAÇÕES' svg={Notification}svgzoom='16px' svgpositionY='16px'/>
+            <Miniboxes description='NOTIFICAÇÕES' svg={Notification}svgzoom='16px' svgpositionY='16px' bbt={true}/>
 
             <ProfileBar>
                 <ProfileAvatar>

@@ -10,7 +10,7 @@ export const Container = styled.div`
     transition: border-bottom-color 0.5s;
 
     &:hover {
-        border-bottom-color: #d6d6d6;
+        border-bottom-color: ${props=>props.bbt ? '#d6d6d6' : ''};
     }
 
     & div:nth-child(1) {

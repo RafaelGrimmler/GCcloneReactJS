@@ -7,16 +7,16 @@ import Avatar from '../Avatar'
 import Level from '../Level'
 
 // SVGS
-import Trophy from '../../img/Miniboxes/Trophy.svg'
-import Star from '../../img/Miniboxes/Star.svg'
-import Medal from '../../img/Miniboxes/Medal.svg'
-import Search from '../../img/Miniboxes/Search.svg'
-import Store from '../../img/Miniboxes/Store.svg'
-import Notification from '../../img/Miniboxes/Notification.svg'
+import Trophy from '../../../img/Miniboxes/Trophy.svg'
+import Star from '../../../img/Miniboxes/Star.svg'
+import Medal from '../../../img/Miniboxes/Medal.svg'
+import Search from '../../../img/Miniboxes/Search.svg'
+import Store from '../../../img/Miniboxes/Store.svg'
+import Notification from '../../../img/Miniboxes/Notification.svg'
 //
 
 // Context
-import { useUser } from '../../context/UserContext'
+import { useUser } from '../../../context/UserContext'
 
 function Header() {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import LevelPalette from '../../LevelPalette.json'
+import LevelPalette from '../../../LevelPalette.json'
 
 import { Container, LevelCircle } from './styles';
 

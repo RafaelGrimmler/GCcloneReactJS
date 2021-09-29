@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ChatIcon from '../../img/Chat/chat.svg'
-import SadFace from '../../img/Chat/sadface.svg'
+import ChatIcon from '../../../img/Chat/chat.svg'
+import SadFace from '../../../img/Chat/sadface.svg'
 
 export const Container = styled.div`
     width: 81px;

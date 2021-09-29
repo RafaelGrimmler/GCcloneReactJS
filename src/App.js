@@ -2,8 +2,8 @@ import React from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 
 import GlobalStyle from './Styles/styles'
-import Header from './Components/Header'
-import Talkbar from './Components/Talkbar'
+import Header from './Components/General/Header'
+import Talkbar from './Components/General/Talkbar'
 
 // ROUTES
 import Lobby from './Pages/Lobby'

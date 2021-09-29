@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import GClogo from '../../img/Header/GClogo.svg'
-import SmallGCLogo from '../../img/Header/SmallGCLogo.svg'
-import CSsoldier from '../../img/Header/HeaderCSSoldier.svg'
-import ICONSignature from '../../img/Header/Signature.png'
+import GClogo from '../../../img/Header/GClogo.svg'
+import SmallGCLogo from '../../../img/Header/SmallGCLogo.svg'
+import CSsoldier from '../../../img/Header/HeaderCSSoldier.svg'
+import ICONSignature from '../../../img/Header/Signature.png'
 
 export const Container = styled.header`
     width: 100%;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Circle from '../../img/Avatar/Circle.svg'
-import AvatarImage from '../../img/Avatar/AvatarImage.jpg'
+import Circle from '../../../img/Avatar/Circle.svg'
+import AvatarImage from '../../../img/Avatar/AvatarImage.jpg'
 
 export const Container = styled.div`
   width: 50px;

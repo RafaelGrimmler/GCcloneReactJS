@@ -7,6 +7,7 @@ import ICONSignature from '../../img/Header/Signature.png'
 export const Container = styled.header`
     width: 100%;
     height: 80px;
+    z-index: 99;
     background-color: var(--main-bg-color);
     border-bottom: 1px solid var(--header-border-color);
     box-shadow: inset 0 -1px #454B56, 

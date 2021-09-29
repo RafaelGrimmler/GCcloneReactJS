@@ -6,7 +6,7 @@ export const Container = styled.div`
     border-right: 1px solid var(--header-border-color);
     border-bottom: 1px solid var(--main-bg-color);
     position: relative;
-    
+    display: ${props=>props.display};
     transition: border-bottom-color 0.5s;
 
     &:hover {

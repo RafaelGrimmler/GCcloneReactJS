@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import GClogo from '../../img/Header/GClogo.svg'
+import SmallGCLogo from '../../img/Header/SmallGCLogo.svg'
 import CSsoldier from '../../img/Header/HeaderCSSoldier.svg'
 import ICONSignature from '../../img/Header/Signature.png'
 
@@ -13,7 +14,6 @@ export const Container = styled.header`
               inset 0 1px #454B56;
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden;
     position: fixed;
 `;
 
@@ -72,6 +72,12 @@ export const Signature = styled.div`
     & div:nth-child(3):hover {
         background-color: rgba(250, 250, 250, 0.05);
     }
+
+    @media only screen and (max-width: 1175px){
+        & {
+        display: none;
+        }
+    }
 `;
 
 export const Points = styled.div`
@@ -96,6 +102,12 @@ export const Points = styled.div`
         font-weight: bold;
         position: absolute;
         top: 5px;
+    }
+
+    @media only screen and (max-width: 1175px){
+        & {
+        display: none;
+        }
     }
 `;
 
@@ -167,9 +179,21 @@ export const ProfileBar = styled.div`
     display: flex;
     justify-content: center;
     transition: border-bottom-color 0.5s;
-
+    
     &:hover {
         border-bottom-color: #d6d6d6;
+    }
+
+    @media only screen and (max-width: 1175px){
+        & {
+            border-left: 1px solid var(--header-border-color);
+        }
+    }
+
+    @media only screen and (max-width: 562px){
+        & {
+            display: none;
+        }
     }
 `;
 
@@ -233,8 +257,13 @@ export const Menu = styled.div`
     border-right: 1px solid var(--header-border-color);
     border-bottom: 1px solid ${props=>props.bg ? 'rgba(44,151,222,.6)' : 'var(--main-bg-color)'};
     cursor: pointer;
-    background: ${props=>props.bg ? 'linear-gradient(-180deg,rgba(44,151,222,0) 20%,rgba(44,151,222,.2));' : ''}
-    
+    background: ${props=>props.bg ? 'linear-gradient(-180deg,rgba(44,151,222,0) 20%,rgba(44,151,222,.2));' : ''};
+
+    @media only screen and (max-width: 562px){
+        & {
+            border-left: 1px solid var(--header-border-color);
+        }
+    }
 `;
 
 export const MenuSup = styled.div`
@@ -334,6 +363,30 @@ export const Logo = styled.div`
         background-position: center center;
         background-repeat: no-repeat;
     }
+
+    @media only screen and (max-width: 900px){
+        & {
+            width: 89px;
+        }
+
+        a div div {
+            width: 100%;
+            height: 100%;
+            background-image: url(${SmallGCLogo});
+            background-size: 50px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        a div div:hover {
+            width: 100%;
+            height: 100%;
+            background-image: url(${SmallGCLogo});
+            background-size: 50px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
 `;
 
 export const PlayNow = styled.div`
@@ -361,6 +414,20 @@ export const PlayNow = styled.div`
         background: linear-gradient(to top, #bcd606, #c5d13d);
         box-shadow: 0px -1px 5px #eaf573;
     }
+
+    @media only screen and (max-width: 900px){
+        & {
+            width: 89px;
+        }
+
+        & span:nth-child(3){
+            display: none;
+        }
+
+        & span:nth-child(2){
+            font-size: 15px;
+        }
+    }
 `;
 
 export const HeaderCSSoldierSVG = styled.div`
@@ -369,4 +436,62 @@ export const HeaderCSSoldierSVG = styled.div`
     background-image: url(${CSsoldier});
     background-size: cover;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
+`;
+
+
+// Responsive
+// Responsive
+// Responsive
+
+export const MoreBlock = styled.div`
+    display: none;
+    width: 89px;
+    height: 78px;
+    border-right: 1px solid var(--header-border-color);
+    background: linear-gradient(-180deg,rgba(44,151,222,0) 20%,rgba(44,151,222,.2));
+    cursor: pointer;
+    position: relative;
+
+    @media only screen and (max-width: 1628px){
+        & {
+            display: block;
+        }
+    }
+`;
+
+export const MoreBlockSup = styled.div`
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span{
+        color: white;
+        font-size: 25px;
+    }
+`;
+
+export const MoreBlockInf = styled.div`
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & span{        
+        font-stretch: ultra-condensed;
+        font-weight: bold;
+        font-size: 11px;
+        color: var(--header-font-color);
+        position: absolute;
+        top: 7px;
+    }
+`;
+
+export const MoreBlockLinks = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    background-color: var(--main-bg-color);
+    display: ${props=>props.display};
 `;

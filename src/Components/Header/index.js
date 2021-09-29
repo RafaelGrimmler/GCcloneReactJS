@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName, ProfileLevelContainer, ProfileLevel, ProfileBadge, Menu, MenuBar, MenuSup, MenuInf } from './styles';
+import { Container, LeftSide, RightSide, Logo, PlayNow, HeaderCSSoldierSVG, Signature, Points, GoldPoint, SilverPoint, ProfileBar, ProfileAvatar ,ProfileInformations, PointsHover, ProfileInformationsContainer, ProfileInformationsName, ProfileLevelContainer, ProfileLevel, ProfileBadge, Menu, MenuBar, MenuSup, MenuInf, MoreBlock, MoreBlockSup, MoreBlockInf, MoreBlockLinks } from './styles';
 
 import Miniboxes from '../Miniboxes'
 import Avatar from '../Avatar'
@@ -11,11 +11,9 @@ import Trophy from '../../img/Miniboxes/Trophy.svg'
 import Star from '../../img/Miniboxes/Star.svg'
 import Medal from '../../img/Miniboxes/Medal.svg'
 import Search from '../../img/Miniboxes/Search.svg'
-import Draft from '../../img/Miniboxes/Draft.png'
 import Store from '../../img/Miniboxes/Store.svg'
 import Notification from '../../img/Miniboxes/Notification.svg'
 //
-
 
 // Context
 import { useUser } from '../../context/UserContext'
@@ -24,11 +22,20 @@ function Header() {
 
     const User = useUser()
     const [menuActivated, setMenuActivated] = useState(false)
+    const [menuMoreBar, setMenuMoreBar] = useState(false)
+    const [screenW, setScreenW] = useState(window.innerWidth)
 
     const HandleMenu = ()=>{
-        menuActivated ? setMenuActivated(false) : setMenuActivated(true)
-        console.log(menuActivated)
+        menuActivated ? setMenuActivated(false):setMenuActivated(true)
     }
+
+    const HandleBoxesResponsive = ()=>{
+        menuMoreBar ? setMenuMoreBar(false):setMenuMoreBar(true)
+    }
+
+    window.addEventListener('resize', e=>{
+        setScreenW(e.target.innerWidth)
+    })
 
     return (
       <Container>
@@ -47,17 +54,36 @@ function Header() {
                 <span>AGORA</span>
             </PlayNow>
 
-            <Miniboxes description='CAMPEONATOS' svg={Trophy} svgzoom='18px' svgpositionY='16px' bbt={true}/>
-            <Miniboxes description='RANKED' svg={Star} svgzoom='23px' svgpositionY='11px' bbt={true}/>
-            <Miniboxes description='MISSÕES' svg={Medal} svgzoom='20px' svgpositionY='12px' bbt={true}/>
-            <Miniboxes description='GAMES ACADEMY' svg='https://gamersclub.com.br/assets/images/icone-ga.png'svgzoom='15px' svgpositionY='12px' bbt={true}/>
-            <Miniboxes description='NOTÍCIAS' svg={Draft} svgzoom='24px' svgpositionY='15px' bbt={true}/>
-            <Miniboxes description='BUSCAR' svg={Search}svgzoom='16px' svgpositionY='14px' bbt={true}/>
+            <Miniboxes description='CAMPEONATOS' svg={Trophy} svgzoom='18px' svgpositionY='16px' bbt={true} display={screenW < 1361 ? 'none':'block'}/>
+
+            <Miniboxes description='RANKED' svg={Star} svgzoom='23px' svgpositionY='11px' bbt={true} display={screenW < 1450 ? 'none':'block'}/>
+
+            <Miniboxes description='MISSÕES' svg={Medal} svgzoom='20px' svgpositionY='12px' bbt={true} display={screenW < 1540 ? 'none':'block'}/>
+
+            <Miniboxes description='GAMES ACADEMY' svg='https://gamersclub.com.br/assets/images/icone-ga.png'svgzoom='15px' svgpositionY='12px' bbt={true} display={screenW < 1628 ? 'none':'block'}/>
+
+            <Miniboxes description='BUSCAR' svg={Search}svgzoom='16px' svgpositionY='14px' bbt={true} display={screenW < 1628 ? 'none':'block'}/>
+
+            <MoreBlock onClick={HandleBoxesResponsive}>
+                <MoreBlockSup>
+                    <span>...</span>
+                </MoreBlockSup>
+                <MoreBlockInf>
+                    <span>MAIS</span>
+                </MoreBlockInf>
+                <MoreBlockLinks display={menuMoreBar ? 'block':'none'}>
+                    <Miniboxes description='CAMPEONATOS' svg={Trophy} svgzoom='18px' svgpositionY='16px' bbt={true} display={screenW > 1361 ? 'none':'block'}/>
+                    <Miniboxes description='RANKED' svg={Star} svgzoom='23px' svgpositionY='11px' bbt={true} display={screenW > 1450 ? 'none':'block'}/>
+                    <Miniboxes description='MISSÕES' svg={Medal} svgzoom='20px' svgpositionY='12px' bbt={true} display={screenW > 1540 ? 'none':'block'}/>
+                    <Miniboxes description='GAMES ACADEMY' svg='https://gamersclub.com.br/assets/images/icone-ga.png'svgzoom='15px' svgpositionY='12px' bbt={true} display={screenW > 1628 ? 'none':'block'}/>
+                    <Miniboxes description='BUSCAR' svg={Search}svgzoom='16px' svgpositionY='14px' bbt={true} display={screenW > 1628 ? 'none':'block'}/>
+                </MoreBlockLinks>
+            </MoreBlock>
 
           </LeftSide>
 
           <RightSide>
-            <Signature>
+            <Signature> 
                 <a href="https://gamersclub.com.br/">
                     <div />
                     <div>
@@ -66,7 +92,7 @@ function Header() {
                     <div />
                 </a>
             </Signature>
-            <Miniboxes description='LOJA' svg={Store}svgzoom='18px' svgpositionY='14px' bbt={true}/>
+            <Miniboxes description='LOJA' svg={Store}svgzoom='18px' svgpositionY='14px' bbt={true} display={screenW < 1175 ? 'none':'block'}/>
 
             <Points>
                 <PointsHover />
@@ -84,7 +110,7 @@ function Header() {
                 </SilverPoint>
             </Points>
             
-            <Miniboxes description='NOTIFICAÇÕES' svg={Notification}svgzoom='16px' svgpositionY='16px' bbt={true}/>
+            <Miniboxes description='NOTIFICAÇÕES' svg={Notification}svgzoom='16px' svgpositionY='16px' bbt={true} display={screenW < 1175 ? 'none':'block'}/>
 
             <ProfileBar>
                 <ProfileAvatar>

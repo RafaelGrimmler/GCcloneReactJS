@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Container, Hidepart, Contentcontainer, Leftbackground, Rightbackground, Centralbackground, Contentcenter, Pagename, Akxcontainer, Lobbyoptionscontainer, Createlobbybutton, Joinlobbybutton, Rankedqualify, Currentgamescontainer, Gamesavailable, Gameslive, Gamesvetoing, Litemode, Litemodecheck, Litemodecheckcontainer, Litemodeinput } from './styles';
+import { Container, Hidepart, Contentcontainer, Leftbackground, Rightbackground, Centralbackground, Contentcenter, Pagename, Akxcontainer, Lobbyoptionscontainer, Createlobbybutton, Joinlobbybutton, Rankedqualify, Currentgamescontainer, Gamesavailable, Gameslive, Gamesvetoing, Litemode, Litemodecheck, Litemodecheckcontainer, Litemodeinput, Seemore } from './styles';
 
 function Setgamebar() {
+
+  const [liteMode, setLiteMode] = useState(false)
+
+  const Handlelitemode = ()=>{
+    liteMode ? setLiteMode(false) : setLiteMode(true)
+    console.log(liteMode)
+  }
+
   return (
       <Container>
 
@@ -45,12 +53,15 @@ function Setgamebar() {
                     <span>VETANDO</span>
                     <span>2</span>
                   </Gamesvetoing>
+                  <Seemore>
+                    <h2>...</h2>
+                  </Seemore>
                 </Currentgamescontainer>
                 <Litemode>
                   <span>Lite Mode</span>
-                  <Litemodecheckcontainer>
-                    <Litemodecheck />
-                    <Litemodeinput type="checkbox"/>
+                  <Litemodecheckcontainer lm={liteMode} >
+                    <Litemodecheck lm={liteMode} />
+                    <Litemodeinput type="checkbox" lm={liteMode} onChange={Handlelitemode}/>
                   </Litemodecheckcontainer>
                 </Litemode>
               </Contentcenter>

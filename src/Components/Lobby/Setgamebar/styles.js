@@ -54,6 +54,34 @@ export const Contentcenter = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 1155px){
+        & {
+            position: absolute;
+            left: -5%;
+        }
+    }
+
+    @media only screen and (max-width: 1093px){
+        & {
+            position: absolute;
+            left: -10%;
+        }
+    }
+
+    @media only screen and (max-width: 1050px){
+        & {
+            position: absolute;
+            left: auto;
+            width: auto;
+        }
+    }
+
+    @media only screen and (max-width: 470px){
+        & {
+            left: 0;
+        }
+    }
 `;
 
 export const Pagename = styled.div`
@@ -98,6 +126,13 @@ export const Akxcontainer = styled.div`
     background-repeat: no-repeat;
     filter: saturate(0);
     animation: ${Akxanimation} 4s linear infinite ;
+
+    @media only screen and (max-width: 470px){
+        & {
+            width: 0;
+            display: none;
+        }
+    }
 `;
 
 export const Lobbyoptionscontainer = styled.div`
@@ -105,6 +140,12 @@ export const Lobbyoptionscontainer = styled.div`
     height: 40px;
     margin-left: 15px;
     display: flex;
+
+    @media only screen and (max-width: 1050px){
+        & {
+            display: none;
+        }
+    }
 `;
 
 export const Createlobbybutton = styled.button`
@@ -223,6 +264,22 @@ export const Currentgamescontainer = styled.div`
         font-stretch: extra-condensed;
         font-size: 14px;
     }
+
+    & h2 {
+        display: none;
+    }
+
+    @media only screen and (max-width: 1288px){
+        & h2 {
+            color: white;
+            background-color: red;
+            display: block;
+        }
+
+        & {
+            width: 50px;
+        }
+    }
 `;
 
 export const Gamesavailable = styled.div`
@@ -240,6 +297,12 @@ export const Gamesavailable = styled.div`
         border-radius: 50px;
         background-color: #8CA800;
         margin-left: 5px;
+    }
+
+    @media only screen and (max-width: 1288px){
+        & {
+            display: none;
+        }
     }
 `;
 
@@ -259,6 +322,12 @@ export const Gameslive = styled.div`
         background-color: #2196FD;
         margin-left: 5px;
     }
+
+    @media only screen and (max-width: 1288px){
+        & {
+            display: none;
+        }
+    }
 `;
 
 export const Gamesvetoing = styled.div`
@@ -276,10 +345,16 @@ export const Gamesvetoing = styled.div`
         background-color: #3C3E48;
         margin-left: 5px;
     }
+
+    @media only screen and (max-width: 1288px){
+        & {
+            display: none;
+        }
+    }
 `;
 
 export const Litemode = styled.div`
-    width: 132px;
+    width: 140px;
     height: 24px;
     margin-left: 4px;
     padding-left: 15px;
@@ -296,7 +371,7 @@ export const Litemode = styled.div`
 `;
 
 export const Litemodecheckcontainer = styled.div`
-    width: 35px;
+    width: 41px;
     height: 24px;
     display: flex;
     justify-content: center;
@@ -304,6 +379,8 @@ export const Litemodecheckcontainer = styled.div`
     margin-left: 5px;
     position: relative;
     border-radius: 20px;
+    border: 1px solid ${props => props.lm ? '#2196FD' : 'var(--header-border-color)'};
+    background-color: ${props => props.lm ? '#2196FD' : 'transparent'};
 `;
 
 export const Litemodecheck = styled.div`
@@ -312,7 +389,8 @@ export const Litemodecheck = styled.div`
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    left: 10%;
+    ${props => props.lm ? 'left: 50%;' : 'left: 10%;'}
+    transition: left 0.2s;
 `;
 
 export const Litemodeinput = styled.input`
@@ -320,11 +398,46 @@ export const Litemodeinput = styled.input`
     height: 100%;
     -webkit-appearance: none;
     border-radius: 40px;
-    border: 1px solid var(--header-border-color);
-
-    &:checked {
-        background-color: #2196FD;
-    }
+    z-index: 97;
+    background-color: transparent;
+    cursor: pointer;
 `;
 
+
+// responsive
+// responsive
+// responsive
+
+export const Seemore = styled.div`
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    & h2 {
+        position: absolute;
+        top: -10px;
+        width: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 30px;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    & h2:hover {
+        background-color: rgba(146, 146, 150,0.2);
+    } 
+    
+    @media only screen and (max-width: 1288px){
+        & {
+            display: flex;
+        }
+    }
+`;
 

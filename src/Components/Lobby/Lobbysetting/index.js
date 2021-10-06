@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Lobbyoptions, Searchinlobby, Selectfilters, Rangefilters, Contentseparator, Namefilter, Contentpart, Leftbutton } from './styles';
+import { Container, Lobbyoptions, Searchinlobby, Selectfilters, Rangefilters, Contentseparator, Namefilter, Contentpart, Leftbutton, Radioscontainer, Radiobutton, Levelrange } from './styles';
 
 // Context
 import { useButton } from '../../../context/LobbyButtonsContext'
@@ -53,7 +53,15 @@ function Lobbysetting() {
                     <span>SKILL LEVEL</span>
                 </Namefilter>
                 <Contentpart>
-
+                    <Radioscontainer>
+                        <Radiobutton id='fslctS' type='radio' name='filterselect' checked/>
+                        <label for='fslctS'>Salas</label>
+                        <Radiobutton id='fslctJ' type='radio' name='filterselect' />
+                        <label for='fslctJ'>Jogadores</label>
+                        <Levelrange>
+                            <span>10 - 20</span>
+                        </Levelrange>
+                    </Radioscontainer>
                 </Contentpart>
             </Rangefilters>
         </Lobbyoptions>

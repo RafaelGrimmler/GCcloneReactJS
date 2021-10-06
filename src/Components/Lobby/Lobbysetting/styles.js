@@ -46,6 +46,7 @@ export const Rangefilters = styled.div`
     width: 253px;
     height: 64px;
     margin-right: 18px;
+    position: relative;
 `;
 
 export const Namefilter = styled.div`
@@ -79,9 +80,82 @@ export const Leftbutton = styled.button`
     cursor: pointer;
 
     & span {
-        color: #bfbfbf;
+        color: ${props => props.selected ? 'white' : '#bfbfbf'};
         font-weight: bold;
         font-stretch: condensed;
+    }
+`;
+
+export const Radioscontainer = styled.div`
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    & label {
+        color: #bfbfbf;
+        margin-left: 5px;
+        margin-right: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+`;
+
+export const Radiobutton = styled.input`
+    width: 19px;
+    height: 19px;
+    background-color: #272736;
+    -webkit-appearance: none;
+    border: 2px solid var(--header-border-color);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:checked {
+        width: 19px;
+        height: 19px;
+        background-color: #217ccc;
+        border-color: #2196FD;
+    }
+
+    &:checked:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: white;
+    }
+`;
+
+export const Levelrange = styled.div`
+    width: 48px;
+    height: 20px;
+    background-color: #8BA40C;
+    position: relative;
+    margin-left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #8BA40C;
+        border-top: 10px solid transparent;
+        position: absolute;
+        left: -10px;
+    }
+
+    & span {
+        color: white;
+        font-size: 14px;
+        font-stretch: extra-condensed;
     }
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Wrapper } from './styles';
+import { Container, Wrapper, Roomscontainer } from './styles';
 
 // components
 import Lobbysetting from '../Lobbysetting';
@@ -10,6 +10,9 @@ function Maincontent() {
     <Container>
       <Wrapper>
         <Lobbysetting />
+        <Roomscontainer>
+          
+        </Roomscontainer>
       </Wrapper>
     </Container>
   );

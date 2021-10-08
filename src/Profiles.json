@@ -2,216 +2,259 @@
     {
         "id":0,
         "name":"User",
-        "level":0
+        "level":0,
+        "prime":true
     },
     {
         "id":1,
         "name":"Trlll",
-        "level":0
+        "level":0,
+        "prime":true
     },
     {
         "id":2,
         "name":"- - -",
-        "level":0
+        "level":0,
+        "prime":true
     },
     {
         "id":3,
         "name":"ABC",
-        "level":1
+        "level":1,
+        "prime":true
     },
     {
         "id":4,
         "name":"---",
-        "level":1
+        "level":1,
+        "prime":true
     },
     {
         "id":5,
         "name":"-=||=||=-",
-        "level":2
+        "level":2,
+        "prime":false
     },
     {
         "id":7,
         "name":"Test",
-        "level":2
+        "level":2,
+        "prime":false
     },
     {
         "id":8,
         "name":"Tes",
-        "level":3
+        "level":3,
+        "prime":false
     },
     {
         "id":9,
         "name":"Set",
-        "level":3
+        "level":3,
+        "prime":true
     },
     {
         "id":10,
         "name":"Est",
-        "level":4
+        "level":4,
+        "prime":true
     },
     {
         "id":11,
         "name":"E s T",
-        "level":4
+        "level":4,
+        "prime":true
     },
     {
         "id":12,
         "name":"-Jo",
-        "level":5
+        "level":5,
+        "prime":true
     },
     {
         "id":13,
         "name":"Jo oo --",
-        "level":5
+        "level":5,
+        "prime":true
     },
     {
         "id":14,
         "name":"sssssss",
-        "level":6
+        "level":6,
+        "prime":true
     },
     {
         "id":15,
         "name":"bbbbbb",
-        "level":6
+        "level":6,
+        "prime":true
     },
     {
         "id":16,
         "name":"b - b",
-        "level":7
+        "level":7,
+        "prime":true
     },
     {
         "id":17,
         "name":"Lt",
-        "level":7
+        "level":7,
+        "prime":true
     },
     {
         "id":18,
         "name":"Cdd",
-        "level":8
+        "level":8,
+        "prime":true
     },
     {
         "id":19,
         "name":"Cta",
-        "level":8
+        "level":8,
+        "prime":true
     },
     {
         "id":20,
         "name":"aAaaTt",
-        "level":9
+        "level":9,
+        "prime":true
     },
     {
         "id":21,
         "name":"Fon",
-        "level":9
+        "level":9,
+        "prime":true
     },
     {
         "id":22,
         "name":"Mcc",
-        "level":10
+        "level":10,
+        "prime":false
     },
     {
         "id":23,
         "name":"LLLooooo",
-        "level":10
+        "level":10,
+        "prime":false
     },
     {
         "id":24,
         "name":"dab",
-        "level":11
+        "level":11,
+        "prime":true
     },
     {
         "id":25,
         "name":"iou",
-        "level":11
+        "level":11,
+        "prime":true
     },
     {
         "id":26,
         "name":"aaasss-=-",
-        "level":12
+        "level":12,
+        "prime":false
     },
     {
         "id":27,
         "name":"aAlt",
-        "level":12
+        "level":12,
+        "prime":false
     },
     {
         "id":28,
         "name":"sat",
-        "level":13
+        "level":13,
+        "prime":true
     },
     {
         "id":29,
         "name":"Veyl",
-        "level":13
+        "level":13,
+        "prime":true
     },
     {
         "id":30,
         "name":"Voyl",
-        "level":14
+        "level":14,
+        "prime":true
     },
     {
         "id":31,
         "name":"Riuych",
-        "level":14
+        "level":14,
+        "prime":true
     },
     {
         "id":32,
         "name":"Jat",
-        "level":15
+        "level":15,
+        "prime":true
     },
     {
         "id":33,
         "name":"Tagh",
-        "level":15
+        "level":15,
+        "prime":true
     },
     {
         "id":34,
         "name":"Tfaijski",
-        "level":16
+        "level":16,
+        "prime":true
     },
     {
         "id":35,
         "name":"OOlllk",
-        "level":16
+        "level":16,
+        "prime":false
     },
     {
         "id":36,
         "name":"jJJJsks",
-        "level":17
+        "level":17,
+        "prime":true
     },
     {
         "id":37,
         "name":"Goaues",
-        "level":17
+        "level":17,
+        "prime":false
     },
     {
         "id":38,
         "name":"Hisut",
-        "level":18
+        "level":18,
+        "prime":false
     },
     {
         "id":39,
         "name":"Msute",
-        "level":18
+        "level":18,
+        "prime":true
     },
     {
         "id":40,
         "name":"JIutre",
-        "level":19
+        "level":19,
+        "prime":true
     },
     {
         "id":41,
         "name":"Respo",
-        "level":19
+        "level":19,
+        "prime":true
     },
     {
         "id":42,
         "name":"IYtt",
-        "level":20
+        "level":20,
+        "prime":true
     },
     {
         "id":43,
         "name":"Jyiyk",
-        "level":20
+        "level":20,
+        "prime":true
     }
 ]

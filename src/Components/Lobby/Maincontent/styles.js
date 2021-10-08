@@ -9,6 +9,11 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    width: 1200px;
+    width: 1050px;
     height: 100%;
+`;
+
+export const Roomscontainer = styled.div`
+    width: 100%;
+    height: 560px;
 `;

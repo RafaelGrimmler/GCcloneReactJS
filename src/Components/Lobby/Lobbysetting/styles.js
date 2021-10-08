@@ -8,6 +8,19 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 1295px){
+        & {
+            display: block;
+            height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 524px){
+        & {
+            height: 250px;
+        }
+    }
 `;
 
 export const Lobbyoptions = styled.div`
@@ -19,6 +32,15 @@ export const Lobbyoptions = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1295px){
+        & {
+            width: 95%;
+            margin-left: 20px;
+            display: block;
+            position: relative;
+        }
+    }
 `;
 
 export const Searchinlobby = styled.div`
@@ -32,6 +54,15 @@ export const Searchinlobby = styled.div`
     align-items: center;
     justify-content: space-between;
     position: relative;
+
+    @media only screen and (max-width: 1295px){
+        & {
+            width: 95%;
+            margin-left: 20px;
+            margin-top: 15px;
+            height: 108px;
+        }
+    }
 `;
 
 export const Searchincentercontainer = styled.div`
@@ -40,6 +71,14 @@ export const Searchincentercontainer = styled.div`
     margin-left: 18px;
     margin-right: 18px;
     position: relative;
+
+    @media only screen and (max-width: 1295px){
+        & {
+            width: 100%;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+    }
 `;
 
 export const Navigatebar = styled.div`
@@ -91,6 +130,16 @@ export const Navigatebar = styled.div`
         border-left: none;
     }
 
+    @media only screen and (max-width: 1295px){
+        & {
+            width: 100%;
+        }
+
+        & input {
+            width: 100%;
+        }
+    }
+
 `;
 
 export const Selectfilters = styled.div`
@@ -98,12 +147,43 @@ export const Selectfilters = styled.div`
     height: 64px;
     margin-left: 18px;
     position: relative;
+
+    
+    @media only screen and (max-width: 1295px){
+        & {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 524px){
+        & {
+            margin-bottom: 75px;
+        }
+    }
 `;
 
 export const Contentseparator = styled.div`
     height: 64px;
     width: 0;
     border-left: 1px solid var(--header-border-color);
+
+    @media only screen and (max-width: 1295px){
+        & {
+            height: 0;
+            border-left: none;
+            border-bottom: 1px solid var(--header-border-color);
+            position: absolute;
+            top: 100px;
+            margin-left: 18px;
+            width: 90%;
+        }
+    }
+
+    @media only screen and (max-width: 524px){
+        & {
+            top: 145px;
+        }
+    }
 `;
 
 export const Rangefilters = styled.div`
@@ -111,6 +191,13 @@ export const Rangefilters = styled.div`
     height: 64px;
     margin-right: 18px;
     position: relative;
+
+    @media only screen and (max-width: 1295px){
+        & {
+            margin-left: 20px;
+            margin-top: 40px;
+        }
+    }
 `;
 
 export const Namefilter = styled.div`
@@ -124,6 +211,12 @@ export const Namefilter = styled.div`
         font-size: 13px;
         font-stretch: extra-condensed;
     }
+
+    @media only screen and (max-width: 1295px){
+        & {
+            margin-top: ${props=>props.respmargt}px;
+        }
+    }
 `;
 
 export const Contentpart = styled.div`
@@ -131,6 +224,14 @@ export const Contentpart = styled.div`
     height: 39px;
     position: absolute;
     bottom: 0;
+
+    @media only screen and (max-width: 1295px){
+        & {
+            width: 95%;
+            position: relative;
+            margin-top: 15px;
+        }
+    }
 `;
 
 export const Leftbutton = styled.button`
@@ -147,6 +248,12 @@ export const Leftbutton = styled.button`
         color: ${props => props.selected ? 'white' : '#bfbfbf'};
         font-weight: bold;
         font-stretch: condensed;
+    }
+
+    @media only screen and (max-width: 524px){
+        & {
+            margin-top: 5px;
+        }
     }
 `;
 

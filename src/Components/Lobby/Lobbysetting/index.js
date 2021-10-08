@@ -47,10 +47,10 @@ function Lobbysetting() {
         <Container>
         <Lobbyoptions>
             <Selectfilters>
-                <Namefilter>
+                <Namefilter respmargt={15}>
                     <span>MOSTRAR SALAS</span>
                 </Namefilter>
-                <Contentpart>
+                <Contentpart respborderb={1} respmargb={25}>
                     <Leftbutton marginright={'10px'} onClick={HandlebuttonsStatusPrime} selected={Buttons.statusPrime}>
                         <span>Status Prime</span>
                     </Leftbutton>
@@ -67,10 +67,10 @@ function Lobbysetting() {
             </Selectfilters>
             <Contentseparator />
             <Rangefilters>
-                <Namefilter>
+                <Namefilter respmargt={15}>
                     <span>SKILL LEVEL</span>
                 </Namefilter>
-                <Contentpart>
+                <Contentpart respborderb={0} respmargb={0}>
                     <Radioscontainer>
                         <Radiobutton id='fslctS' type='radio' name='filterselect'  />
                         <label htmlFor='fslctS'>Salas</label>
@@ -94,10 +94,10 @@ function Lobbysetting() {
         </Lobbyoptions>
         <Searchinlobby>
             <Searchincentercontainer>
-                <Namefilter>
+                <Namefilter respmargt={-15}>
                     <span>PESQUISAR NA LOBBY</span>
                 </Namefilter>
-                <Contentpart>
+                <Contentpart respborderb={0} respmargb={0}>
                     <Navigatebar>
                         <input type="text" placeholder='Ex. Nome de jogador' />
                         <div />

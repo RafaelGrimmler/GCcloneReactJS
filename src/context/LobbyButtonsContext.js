@@ -6,7 +6,7 @@ export function useButton(){
     return useContext(LobbyButtonsContext)
 }
 
-export function UserProvider({ children }){
+export function ButtonProvider({ children }){
 
     const [statusPrime, setStatusPrime] = useState(true)
     const [comVagas, setComVagas] = useState(true)

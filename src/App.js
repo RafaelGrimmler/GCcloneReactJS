@@ -11,19 +11,29 @@ import Profile from './Pages/Profile'
 
 //Context
 import { UserProvider } from './context/UserContext'
+import { ButtonProvider } from './context/LobbyButtonsContext'
+import { SliderProvider } from './context/LobbySlidersContext'
 
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
-        <Header />
-        <Talkbar />
-        <GlobalStyle />
+      <ButtonProvider>
+        <SliderProvider>
 
-        <Route component = { Lobby }  path="/" exact />
-        <Route component = { Profile }  path="/:id" exact />
+        
+          <BrowserRouter>
+            <Header />
+            <Talkbar />
+            <GlobalStyle />
 
-      </BrowserRouter>
+            <Route component = { Lobby }  path="/" exact />
+            <Route component = { Profile }  path="/:id" exact />
+
+          </BrowserRouter>
+          
+
+        </SliderProvider>
+      </ButtonProvider>
     </UserProvider>
   );
 }

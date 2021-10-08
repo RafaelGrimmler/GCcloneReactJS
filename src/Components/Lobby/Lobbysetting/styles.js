@@ -159,4 +159,66 @@ export const Levelrange = styled.div`
     }
 `;
 
+export const Levelslidercontainer = styled.div`
+    width: 100%;
+    height: 15px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Inputslider = styled.input`
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    background-color: #212335;
+    border-radius: 25px;
+    z-index: 7;
+    opacity: 0;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        pointer-events: all;
+        z-index: 7;
+        cursor: grab;
+        width: 17px;
+        height: 17px;
+        background-color: white;
+        border-radius: 50%;
+    }
+`;
+
+export const Sliderbar = styled.div`
+    width: ${props=> props.width > 7 ? props.width * 4.8 : props.width * 5.2}%;
+    height: 6px;
+    position: absolute;
+    background-color: #2196FD;
+    border-radius: 25px;
+    left: ${props=>props.left*4.9}%;
+`;
+
+export const Sliderpointer = styled.div`
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background-color: white;
+    left: ${props=>props.left*4.7}%;
+    border-radius: 50%;
+    z-index: 6;
+`;
+
+export const Sliderbg = styled.div`
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    background-color: #212335;
+    border-radius: 25px;
+`;
+
+
+
+
 

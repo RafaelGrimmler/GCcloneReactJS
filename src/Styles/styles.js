@@ -28,5 +28,6 @@ export default createGlobalStyle`
         --main-bg-color: #1E2033;
         --header-border-color: #454B56;
         --header-font-color: #EFEFEF;
+        --lobby-settings-border-color: rgba(120, 126, 138, 0.2);
     }
 `;

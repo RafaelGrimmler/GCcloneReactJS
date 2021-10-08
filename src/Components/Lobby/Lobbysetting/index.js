@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Lobbyoptions, Searchinlobby, Selectfilters, Rangefilters, Contentseparator, Namefilter, Contentpart, Leftbutton, Radioscontainer, Radiobutton, Levelrange, Levelslidercontainer, Inputslider, Sliderbar, Sliderbg, Sliderpointer } from './styles';
+import { Container, Lobbyoptions, Searchinlobby, Selectfilters, Rangefilters, Contentseparator, Namefilter, Contentpart, Leftbutton, Radioscontainer, Radiobutton, Levelrange, Levelslidercontainer, Inputslider, Sliderbar, Sliderbg, Sliderpointer, Searchincentercontainer, Navigatebar } from './styles';
 
 // Context
 import { useButton } from '../../../context/LobbyButtonsContext'
@@ -93,7 +93,17 @@ function Lobbysetting() {
             </Rangefilters>
         </Lobbyoptions>
         <Searchinlobby>
-
+            <Searchincentercontainer>
+                <Namefilter>
+                    <span>PESQUISAR NA LOBBY</span>
+                </Namefilter>
+                <Contentpart>
+                    <Navigatebar>
+                        <input type="text" placeholder='Ex. Nome de jogador' />
+                        <div />
+                    </Navigatebar>
+                </Contentpart>
+            </Searchincentercontainer>
         </Searchinlobby>
     </Container>
     );

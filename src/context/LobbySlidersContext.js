@@ -8,8 +8,8 @@ export function useSlider(){
 
 export function SliderProvider({ children }){
 
-    const [sliderLeft, setSliderLeft] = useState(0)
-    const [sliderRight, setSliderRight] = useState(20)
+    const [sliderLeft, setSliderLeft] = useState(8)
+    const [sliderRight, setSliderRight] = useState(16)
 
     return(
         <LobbySlidersContext.Provider

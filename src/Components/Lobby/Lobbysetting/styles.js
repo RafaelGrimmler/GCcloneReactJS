@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Mainlobbysettingsnavigate from '../../../img/Lobby/Mainlobbysettingsnavigate.svg'
 
 export const Container = styled.section`
     width: 100%;
@@ -12,9 +13,9 @@ export const Container = styled.section`
 export const Lobbyoptions = styled.div`
     width: 754.4px;
     height: 100%;
-    border: 1px solid var(--header-border-color);
+    border: 1px solid rgba(120, 126, 138, 0.2);
     border-radius: 4px;
-    background-color: #2A2C3D;
+    background-color: #212335;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,9 +25,72 @@ export const Searchinlobby = styled.div`
     width: 240px;
     height: 100%;
     margin-left: 15px;
-    border: 1px solid var(--header-border-color);
+    border: 1px solid var(--lobby-settings-border-color);
     border-radius: 4px;
-    background-color: #2A2C3D;
+    background-color: #212335;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+`;
+
+export const Searchincentercontainer = styled.div`
+    width: 202px;
+    height: 64px;
+    margin-left: 18px;
+    margin-right: 18px;
+    position: relative;
+`;
+
+export const Navigatebar = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    & input {
+        width: 180px;
+        background-color: #2A2C3D;
+        border: 1px solid #2A2C3D;
+        border-right: none;
+        border-top-left-radius: 3.5px;
+        border-bottom-left-radius: 3.5px;
+        padding-left: 10px;
+        font-size: 15px;
+        color: white;
+        transition: border 0.4s;
+    }
+
+    & input:focus {
+        border: 1px solid white;
+        border-right: none;
+    }
+    
+    & input::placeholder {
+        font-weight: bold;
+        font-stretch: extra-condensed;
+        color: #9e9e9e;
+    }
+
+    & div {
+        width: 22px;
+        height: 100%;
+        background-color: #2A2C3D;
+        border: 1px solid #2A2C3D;
+        border-left: none;
+        transition: border 0.4s;
+        border-top-right-radius: 3.5px;
+        border-bottom-right-radius: 3.5px;
+        background-image: url(${Mainlobbysettingsnavigate});
+        background-position: -1px center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+    }
+
+    & input:focus + div {
+        border: 1px solid white;
+        border-left: none;
+    }
+
 `;
 
 export const Selectfilters = styled.div`
@@ -214,11 +278,6 @@ export const Sliderbg = styled.div`
     width: 100%;
     height: 6px;
     position: absolute;
-    background-color: #212335;
+    background-color: #404359;
     border-radius: 25px;
 `;
-
-
-
-
-

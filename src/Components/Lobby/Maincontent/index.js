@@ -4,6 +4,7 @@ import { Container, Wrapper, Roomscontainer } from './styles';
 
 // components
 import Lobbysetting from '../Lobbysetting';
+import Room  from '../Room';
 
 function Maincontent() {
   return (
@@ -11,7 +12,11 @@ function Maincontent() {
       <Wrapper>
         <Lobbysetting />
         <Roomscontainer>
-          
+          <Room Prime={true}/>
+          <Room Prime={false}/>
+          <Room Prime={true}/>
+          <Room Prime={true}/>
+          <Room Prime={true}/>
         </Roomscontainer>
       </Wrapper>
     </Container>

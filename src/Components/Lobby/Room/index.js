@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Flag } from './styles';
 
-function Room() {
+function Room({Prime}) {
   return (
-    <Container>
-        
-    </Container>
+      <Container prime={Prime}>
+          <Flag title='Brasil'/>
+      </Container>
   );
 }
 

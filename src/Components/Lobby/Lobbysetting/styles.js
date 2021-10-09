@@ -8,15 +8,16 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     @media only screen and (max-width: 1295px){
         & {
-            display: block;
+            flex-wrap: wrap;
             height: 200px;
         }
     }
 
-    @media only screen and (max-width: 524px){
+    @media only screen and (max-width: 543px){
         & {
             height: 250px;
         }
@@ -37,6 +38,7 @@ export const Lobbyoptions = styled.div`
         & {
             width: 95%;
             margin-left: 20px;
+            margin-right: 20px;
             display: block;
             position: relative;
         }
@@ -53,14 +55,10 @@ export const Searchinlobby = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
 
     @media only screen and (max-width: 1295px){
         & {
-            width: 95%;
-            margin-left: 20px;
-            margin-top: 15px;
-            height: 108px;
+            display: none;
         }
     }
 `;
@@ -155,7 +153,7 @@ export const Selectfilters = styled.div`
         }
     }
 
-    @media only screen and (max-width: 524px){
+    @media only screen and (max-width: 543px){
         & {
             margin-bottom: 75px;
         }
@@ -179,7 +177,7 @@ export const Contentseparator = styled.div`
         }
     }
 
-    @media only screen and (max-width: 524px){
+    @media only screen and (max-width: 543px){
         & {
             top: 145px;
         }
@@ -250,7 +248,7 @@ export const Leftbutton = styled.button`
         font-stretch: condensed;
     }
 
-    @media only screen and (max-width: 524px){
+    @media only screen and (max-width: 543px){
         & {
             margin-top: 5px;
         }

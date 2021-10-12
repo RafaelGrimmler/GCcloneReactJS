@@ -9,7 +9,7 @@ export const Container = styled.div`
     border-radius: 8px;
     border: 1px solid ${props => props.prime ? '#2196FD' : 'rgba(125, 138, 150, 0.0)'};
     position: relative;
-    display: flex;
+    display: ${props => props.showprimerooms ? 'flex' : 'none'};
     justify-content: center;
     box-shadow: ${props => props.prime ? '0 0 10px rgba(33, 150, 253, 0.1)' : ''};
 
@@ -50,7 +50,7 @@ export const Levelcircle = styled.div`
 export const Levelcirclecontent = styled.div`
     width: 35px;
     height: 35px;
-    background-color: green;
+    background-color: ${props => props.bgc};
     border-radius: 50%;
     box-shadow: ${props=>props.prime ? `` : `0 3px 4px rgba(0,0,0,0.4)`};;
     display: flex;
@@ -82,6 +82,7 @@ export const Leadercontainer = styled.div`
     position: absolute;
     top: 32px;
     display: flex;
+    justify-content: center;
     overflow: hidden;
     white-space: nowrap;    
     text-overflow: ellipsis;
@@ -97,7 +98,7 @@ export const Leadercontainer = styled.div`
 
 export const Playerscontainer = styled.div`
     width: 96%;
-    height: 105px;
+    height: 120px;
     position: absolute;
     top: 95px;
     display: grid;
@@ -107,6 +108,26 @@ export const Playerscontainer = styled.div`
 
 export const Player = styled.div`
     height: 100%;
-    border-left: 1px solid rgba(144, 149, 153, 0.1);
-    border-right: ${props => props.br ? '1px solid rgba(144, 149, 153, 0.1)' : ''};
+    position: relative;
+    display: flex;
+    
+    &::before {
+        content: '';
+        height: 100%;
+        width: 1px;
+        background: linear-gradient(to bottom, rgba(144, 149, 153, 0.1), rgba(144, 149, 153, 0.01));
+        position: absolute;
+        left: 0;
+    }
+
+    &::after {
+        display: ${props => props.br ? 'block' : 'none'};
+        content: '';
+        height: 100%;
+        width: 1px;
+        background-image: linear-gradient(to bottom, rgba(144, 149, 153, 0.1), rgba(144, 149, 153, 0.01));
+        position: absolute;
+        right: 0px;
+    }
 `;
+

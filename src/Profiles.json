@@ -33,7 +33,7 @@
         "id":5,
         "name":"-=||=||=-",
         "level":2,
-        "prime":false
+        "prime":true
     },
     {
         "id":7,
@@ -129,13 +129,13 @@
         "id":22,
         "name":"Mcc",
         "level":10,
-        "prime":false
+        "prime":true
     },
     {
         "id":23,
         "name":"LLLooooo",
         "level":10,
-        "prime":false
+        "prime":true
     },
     {
         "id":24,
@@ -153,13 +153,13 @@
         "id":26,
         "name":"aaasss-=-",
         "level":12,
-        "prime":false
+        "prime":true
     },
     {
         "id":27,
         "name":"aAlt",
         "level":12,
-        "prime":false
+        "prime":true
     },
     {
         "id":28,
@@ -207,7 +207,7 @@
         "id":35,
         "name":"OOlllk",
         "level":16,
-        "prime":false
+        "prime":true
     },
     {
         "id":36,
@@ -219,13 +219,13 @@
         "id":37,
         "name":"Goaues",
         "level":17,
-        "prime":false
+        "prime":true
     },
     {
         "id":38,
         "name":"Hisut",
         "level":18,
-        "prime":false
+        "prime":true
     },
     {
         "id":39,
@@ -254,6 +254,18 @@
     {
         "id":43,
         "name":"Jyiyk",
+        "level":20,
+        "prime":true
+    },
+    {
+        "id":44,
+        "name":"Testandio",
+        "level":20,
+        "prime":true
+    },
+    {
+        "id":45,
+        "name":"trol",
         "level":20,
         "prime":true
     }

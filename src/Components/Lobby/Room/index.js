@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Flag, Levelcircle, Levelcirclecontent, Leadercontainer, Primeicon, Playerscontainer, Player } from './styles';
+import { Container, Flag, Levelcircle, Levelcirclecontent, Leadercontainer, Primeicon, Playerscontainer, Player, Playerimgbox } from './styles';
 
 // Context
 import { useButton } from '../../../context/LobbyButtonsContext'
@@ -27,6 +27,12 @@ function Room({p1, p2, p3, p4, p5}) {
   }
   Lvaverage = Math.round(Lvaverage/Qtplayers)
 
+  const handleplayercircle = P => {
+    if( P )
+      return (P.prime ? true : false)
+    return P
+  }
+
   return (
       <Container prime={prime} showprimerooms={Buttons.statusPrime ? prime : true}>
           <Flag/>
@@ -41,19 +47,29 @@ function Room({p1, p2, p3, p4, p5}) {
           </Leadercontainer>
           <Playerscontainer>
             <Player>
-              a
+              <Playerimgbox prime={handleplayercircle(p1)} p={p1}>
+                <div />
+              </Playerimgbox>
             </Player>
             <Player>
-              a
+              <Playerimgbox prime={handleplayercircle(p2)} p={p2}>
+                <div />
+              </Playerimgbox>
             </Player>
             <Player>
-              a
+              <Playerimgbox prime={handleplayercircle(p3)} p={p3}>
+                <div />
+              </Playerimgbox>
             </Player>
             <Player>
-              a
+              <Playerimgbox prime={handleplayercircle(p4)} p={p4}>
+                <div />
+              </Playerimgbox>
             </Player>
             <Player br={true}>
-              a
+              <Playerimgbox prime={handleplayercircle(p5)} p={p5}>
+                <div />
+              </Playerimgbox>
             </Player>
           </Playerscontainer>
       </Container>

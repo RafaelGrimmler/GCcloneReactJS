@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Circle from '../../../img/Lobby/Roomlevelcircle.svg'
+import Pcirclenprime from '../../../img/Lobby/Playercirclenonprime.svg'
 import Primeiconp from '../../../img/Lobby/Primeicon.png'
+import Playerimg from '../../../img/Lobby/Playerimg.jpg'
 
 export const Container = styled.div`
     width: 232px;
@@ -110,6 +112,7 @@ export const Player = styled.div`
     height: 100%;
     position: relative;
     display: flex;
+    justify-content: center;
     
     &::before {
         content: '';
@@ -128,6 +131,50 @@ export const Player = styled.div`
         background-image: linear-gradient(to bottom, rgba(144, 149, 153, 0.1), rgba(144, 149, 153, 0.01));
         position: absolute;
         right: 0px;
+    }
+`;
+
+export const Playerimgbox = styled.div`
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    top: -19px;
+    border: 1px solid rgba(27, 22, 89, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(${props => props.prime ? Circle : props.prime === null ? '' : Pcirclenprime});
+    background-size: 37px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    &::after {
+        content: '';
+        width: 50px;
+        height: 55px;
+        border-radius: 50%;
+        background-image: url(${props => props.prime && Primeiconp });
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: 19px 30px;
+        z-index: 4;
+    }
+
+
+    & div {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        border-radius: 50%;
+        background-image: url(${props => props.p ? Playerimg : ''});
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
     }
 `;
 

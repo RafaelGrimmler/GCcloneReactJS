@@ -3,6 +3,7 @@ import Circle from '../../../img/Lobby/Roomlevelcircle.svg'
 import Pcirclenprime from '../../../img/Lobby/Playercirclenonprime.svg'
 import Primeiconp from '../../../img/Lobby/Primeicon.png'
 import Playerimg from '../../../img/Lobby/Playerimg.jpg'
+import { BsArrowRightCircle } from 'react-icons/bs';
 
 export const Container = styled.div`
     width: 232px;
@@ -11,9 +12,11 @@ export const Container = styled.div`
     border-radius: 8px;
     border: 1px solid ${props => props.prime ? '#2196FD' : 'rgba(125, 138, 150, 0.0)'};
     position: relative;
-    display: ${props => props.showprimerooms ? 'flex' : 'none'};
     justify-content: center;
     box-shadow: ${props => props.prime ? '0 0 10px rgba(33, 150, 253, 0.1)' : ''};
+
+    
+    display: ${props => props.showprimerooms ? (props.showvacancies ? 'flex' : 'none') : 'none'};
 
     &:hover{
         background: linear-gradient(180deg,rgba(2,182,202,0.09) 0,rgba(2,182,202,0.0) 100%),${props=>props.prime ? 'rgba(0, 0, 0, 0.05)' : 'rgba(0, 0, 0, 0.2)'};
@@ -135,37 +138,40 @@ export const Player = styled.div`
 `;
 
 export const Playerimgbox = styled.div`
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     position: absolute;
     top: -19px;
+    left: 3px;
     border: 1px solid rgba(27, 22, 89, 0.4);
+    background-color: #17182B;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(${props => props.prime ? Circle : props.prime === null ? '' : Pcirclenprime});
-    background-size: 37px;
+    background-size: 39px;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: 2;
+    cursor: ${props => props.p ? 'pointer' : ''};
 
     &::after {
         content: '';
-        width: 50px;
-        height: 55px;
+        width: 40px;
+        height: 44px;
         border-radius: 50%;
         background-image: url(${props => props.prime && Primeiconp });
         background-repeat: no-repeat;
         background-size: 15px;
-        background-position: 19px 30px;
+        background-position: 18px 25px;
         z-index: 4;
     }
 
 
     & div {
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -176,5 +182,57 @@ export const Playerimgbox = styled.div`
         background-repeat: no-repeat;
         position: absolute;
     }
+`;
+
+export const Playerlevel = styled.div`
+    width: 20px;
+    height: 20px;
+    background-color: ${props => props.bgc};
+    border-radius: 50%;
+    top: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 1px black;
+    border: 1px solid rgba(0,0,0,0.3);
+
+    & span {
+        color: #b8b8b8;
+        font-size: 12px;
+        font-weight: bold;
+        text-shadow: 0 1px black;
+    }
+`;
+
+export const Roomaction = styled.button`
+    width: 207px;
+    height: 40px;
+    background-color: #8ea600;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    & span {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    &:hover {
+        background-color: #6E7F09;
+    }
+`;
+
+export const Rooomactionicon = styled(BsArrowRightCircle)`
+    width: 22px;
+    height: 22px;
+    color: white;
 `;
 

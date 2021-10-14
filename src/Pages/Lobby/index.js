@@ -5,6 +5,7 @@ import { Container } from './styles';
 // Components
 import Setgamebar from '../../Components/Lobby/Setgamebar';
 import Maincontent from '../../Components/Lobby/Maincontent';
+import Footer from '../../Components/General/Footer'
 
 function Lobby() {
 
@@ -12,6 +13,7 @@ function Lobby() {
         <Container>
             <Setgamebar />
             <Maincontent />
+            <Footer />
         </Container>
     );
 }

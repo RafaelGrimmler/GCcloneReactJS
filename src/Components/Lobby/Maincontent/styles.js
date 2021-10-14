@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const Roomscontainer = styled.div`
     width: 100%;
+    min-height: 610px;
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

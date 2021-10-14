@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, Flag, Levelcircle, Levelcirclecontent, Leadercontainer, Primeicon, Playerscontainer, Player, Playerimgbox, Playerlevel, Roomaction, Rooomactionicon } from './styles';
+import { Container, Flag, Levelcircle, Levelcirclecontent, Leadercontainer, Primeicon, Playerscontainer, Player, Playerimgbox, Playerlevel, Roomaction, Rooomactioniconopen, Rooomactioniconclosed } from './styles';
 
 // Context
 import { useButton } from '../../../context/LobbyButtonsContext'
+import { useSlider } from '../../../context/LobbySlidersContext'
 
 // Color palette
 import LevelPalette from '../../../LevelPalette.json'
@@ -12,6 +13,7 @@ import LevelPalette from '../../../LevelPalette.json'
 function Room({p1, p2, p3, p4, p5}) {
 
   const Buttons = useButton()
+  const {sliderLeft, sliderRight} = useSlider()
 
   const players = [p1, p2, p3, p4, p5]
   var prime = true
@@ -40,8 +42,12 @@ function Room({p1, p2, p3, p4, p5}) {
     return ''
   }
 
+  const levelrange = Lvaverage >= sliderLeft && Lvaverage <= sliderRight ? true : false
+
+  console.log(levelrange)
+
   return (
-      <Container prime={prime} showprimerooms={Buttons.statusPrime ? prime : true} showvacancies={Buttons.comVagas ? (Qtplayers < 5 ? true : false) : true}>
+      <Container prime={prime} showprimerooms={Buttons.statusPrime ? prime : true} showvacancies={Buttons.comVagas ? (Qtplayers < 5 ? true : false) : true} showlevelrange={levelrange}>
           <Flag/>
           <Levelcircle prime={prime}>
             <Levelcirclecontent prime={prime} bgc={LevelPalette[Lvaverage].backgroundColor}>
@@ -104,9 +110,9 @@ function Room({p1, p2, p3, p4, p5}) {
               </Playerlevel>}
             </Player>
           </Playerscontainer>
-          <Roomaction>
-            <Rooomactionicon />
-            <span>ENTRAR</span>
+          <Roomaction fullplayers={Qtplayers === 5 ? true : false}>
+            {Qtplayers === 5 ?  <Rooomactioniconclosed /> : <Rooomactioniconopen />}
+            <span>{Qtplayers === 5 ? 'LOTADO' : 'ENTRAR'}</span>
           </Roomaction>
       </Container>
   );

@@ -28,7 +28,6 @@ function App() {
 
             <Route component = { Lobby }  path="/" exact />
             <Route component = { Profile }  path="/:id" exact />
-
           </BrowserRouter>
           
 

@@ -4,6 +4,7 @@ import Pcirclenprime from '../../../img/Lobby/Playercirclenonprime.svg'
 import Primeiconp from '../../../img/Lobby/Primeicon.png'
 import Playerimg from '../../../img/Lobby/Playerimg.jpg'
 import { BsArrowRightCircle } from 'react-icons/bs';
+import { TiGroup } from 'react-icons/ti'
 
 export const Container = styled.div`
     width: 232px;
@@ -16,7 +17,7 @@ export const Container = styled.div`
     box-shadow: ${props => props.prime ? '0 0 10px rgba(33, 150, 253, 0.1)' : ''};
 
     
-    display: ${props => props.showprimerooms ? (props.showvacancies ? 'flex' : 'none') : 'none'};
+    display: ${props => props.showprimerooms ? (props.showvacancies ? (props.showlevelrange ? 'flex' : 'none') : 'none') : 'none'};
 
     &:hover{
         background: linear-gradient(180deg,rgba(2,182,202,0.09) 0,rgba(2,182,202,0.0) 100%),${props=>props.prime ? 'rgba(0, 0, 0, 0.05)' : 'rgba(0, 0, 0, 0.2)'};
@@ -208,7 +209,7 @@ export const Playerlevel = styled.div`
 export const Roomaction = styled.button`
     width: 207px;
     height: 40px;
-    background-color: #8ea600;
+    background-color: ${props => props.fullplayers ? '#131325' : '#8ea600'};
     border-radius: 5px;
     position: absolute;
     bottom: 10px;
@@ -216,23 +217,30 @@ export const Roomaction = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: ${props => props.fullplayers ? 'not-allowed': 'pointer'};
 
     & span {
-        color: white;
+        color: ${props => props.fullplayers ? 'rgba(255, 255, 255,0.3)': 'white'};
         font-weight: bold;
-        font-size: 18px;
+        font-size: 15px;
         margin-left: 5px;
     }
 
     &:hover {
-        background-color: #6E7F09;
+        background-color: ${props => props.fullplayers ? '#131325': '#6E7F09'};;
+        
     }
 `;
 
-export const Rooomactionicon = styled(BsArrowRightCircle)`
+export const Rooomactioniconopen = styled(BsArrowRightCircle)`
     width: 22px;
     height: 22px;
     color: white;
+`;
+
+export const Rooomactioniconclosed = styled(TiGroup)`
+    width: 22px;
+    height: 22px;
+    color: rgba(255, 255, 255,0.3);
 `;
 

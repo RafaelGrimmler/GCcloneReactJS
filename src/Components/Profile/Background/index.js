@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Topside, Botside, BackgroundImage, BackgroundImageEffect } from './styles';
+import { Container, Topside, Botside, BackgroundImage, BackgroundImageEffect, BackgroundMapBox, BackgroundMapImage } from './styles';
 
 function Background() {
   return (
@@ -9,6 +9,9 @@ function Background() {
           <Botside>
             <BackgroundImage/>
             <BackgroundImageEffect/>
+            <BackgroundMapBox>
+              <BackgroundMapImage/>
+            </BackgroundMapBox>
           </Botside>
       </Container>
   );
